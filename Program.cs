@@ -1302,18 +1302,18 @@ namespace Setul_3
             }
             Console.WriteLine("si interclasati cei 2 vectori: ");
 
-            int[] c = new int[n + m];
+        
             i = 0; j = 0; int k = 0;
             while(i < n && j < m) ///ne folosim de unul dintre pasii algoritmului MergeSort
             {
                 if (a[i] < b[j])
                 {
-                    c[k] = a[i];
+                    Console.Write(a[i] + " ");
                     i++;
                 }
                 else
                     {
-                        c[k] = b[j];
+                       Console.Write(b[j] + " ");
                         j++;
                     }
                 k++;
@@ -1321,20 +1321,18 @@ namespace Setul_3
             
                 while(j < m)
                 {
-                    c[k] = b[j];
+                    Console.Write(b[j] + " ");
                     j++;
                     k++;
                 }
          
                     while (i < n)
                     {
-                        c[k] = a[i];
+                        Console.Write(a[i] + " ");
                         i++;
                         k++;
                     }
-             
-            for (i = 0; i < k; i++)
-                Console.Write(c[i] + " ");
+           
                     
             Console.WriteLine();
         }
