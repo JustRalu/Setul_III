@@ -36,7 +36,7 @@ namespace Setul_3
             ex_13();
             ex_14();
             ex_15();
-            ex_16()*/
+            ex_16();
             ex_17();           
             ex_18();
             ex_19();
@@ -51,7 +51,7 @@ namespace Setul_3
             ex_28();
             ex_29();
             ex_30();
-            ex_31();*/
+            ex_31();
 
             Console.ReadKey();
         }
