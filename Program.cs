@@ -1064,29 +1064,6 @@ namespace Setul_3
             lungime_dif_a = diferente_x_y_lungime_0(a, b, n, m, lungime_dif_a);
             lungime_dif_b = diferente_x_y_lungime_0(b, a, m, n, lungime_dif_b);
 
-
-            int[] reuniune;
-            if (lungime_dif_a == 0 && lungime_dif_b == 0)
-            {
-                reuniune = new int[n];
-            }
-            else
-                if (lungime_dif_a == 0)
-                {
-                    reuniune = new int[m];
-                }   
-                else
-                    if (lungime_dif_b == 0)
-                    {   
-                        reuniune = new int[n];
-                    }
-                    else
-                    {
-                        reuniune = new int[lungime_dif_a + lungime_dif_b + (n - lungime_dif_a)];
-                    }
-
-
-
             if (lungime_dif_a != 0)
             {
                 int[] dif_a = new int[lungime_dif_a];
@@ -1155,48 +1132,42 @@ namespace Setul_3
         
 
             Console.WriteLine();
-            int k = 0;
             i = 0; j = 0;
             Console.WriteLine("v1 U V2: ");
             while (i < n && j < m)
             {
                 if (a[i] < b[j])
                 {
-                    reuniune[k] = a[i];
+                    Console.Write(a[i] + " ");
                     i++;
                 }
                 else
                 if (a[i] > b[j])
                 {
-                    reuniune[k] = b[j];
-                    j++;
+                     Console.Write(b[j] + " ");
+                     j++;
 
                 }
                 else
                 {
-                    reuniune[k] = a[i];
+                    Console.Write(b[j] + " ");
                     i++;
                     j++;
                 }
-                k++;
             }
            
                 while (i < n)
                 {
-                    reuniune[k] = a[i];
-                    k++;
+                    Console.Write(a[i] + " ");
                     i++;
                 }
           
                     while (j < m)
                     {
-                        reuniune[k] = b[j];
-                        k++;
+                        Console.Write(b[j] + " ");
                         j++;
                     }
-                
-                    for (i = 0; i < k; i++)
-                        Console.Write(reuniune[i] + " ");
+           
                     Console.WriteLine();
                
         }
