@@ -659,56 +659,7 @@ namespace Setul_3
             Console.WriteLine("Numarul convertit e: ");
 
             conversie(n, b);
-           /*int n1 = 0;
-            while (n1 < n)
-                n1 = n1 + 1;
-
-            if (n1 - n == 0)///nr natural
-                conversie(n, b);
-            else
-            {               
-                n1 = n1 - 1;
-             
-                conversie(n, b);
-
-                double parte_fract = n - n1; int zecimala1 = 0;
-                List<double> nr = new List<double>();
-                double zecimala = parte_fract * b;
-                nr.Add(zecimala);
-                while (zecimala1 < zecimala)
-                    zecimala1 = zecimala1 + 1;
-                if (zecimala1 - zecimala != 0)
-                {
-                    zecimala1 = zecimala1 - 1;
-                    Console.Write(zecimala1);
-                    zecimala = (zecimala - zecimala1) * b;
-                    while (!nr.Contains(zecimala))
-                    {
-                        nr.Add(zecimala);
-                        zecimala1 = 0;
-                        while (zecimala1 < zecimala)
-                            zecimala1 = zecimala1 + 1;
-                        if (zecimala1 - zecimala != 0)
-                        {
-                            zecimala1 = zecimala1 - 1;
-                            Console.Write(zecimala1);
-                            zecimala = (zecimala - zecimala1) * b;
-                        }
-                        else
-                        {
-                            Console.Write(zecimala1);
-                            break;
-                        }
-
-                    }
-                }
-                else
-                   Console.Write(zecimala1);
-
-               
-
-            }
-           */
+  
             Console.WriteLine();
         }
         private static long termen(int n, long[] v, int i, long x, int exp)
