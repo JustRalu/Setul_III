@@ -1,4 +1,4 @@
-﻿using Microsoft.Win32;
+using Microsoft.Win32;
 using System;
 using System.Collections.Generic;
 using System.Globalization;
@@ -37,7 +37,7 @@ namespace Setul_3
             ex_14();
             ex_15();
             ex_16();
-            ex_17();           
+            ex_17();
             ex_18();
             ex_19();
             //ex_20();
@@ -171,15 +171,15 @@ namespace Setul_3
                 else
                     if (v[i] == max && v[i] != min)
                     poz_max++;
-                    else
+                else
                         if (v[i] < min)
-                        {
-                            min = v[i];
-                            poz_min = 1;
-                        }
-                        else
+                {
+                    min = v[i];
+                    poz_min = 1;
+                }
+                else
                             if (v[i] == min && v[i] != max)
-                                poz_min++;
+                    poz_min++;
             }
             Console.WriteLine();
             if (min == max)
@@ -366,9 +366,9 @@ namespace Setul_3
                 }
                 else
                     if (k < v[mij])
-                        dr = mij - 1;
-                    else
-                        stg = mij + 1;
+                    dr = mij - 1;
+                else
+                    stg = mij + 1;
             }
             Console.WriteLine();
             if (stg > dr)
@@ -474,12 +474,12 @@ namespace Setul_3
                 v[i] = x;
             }
             Console.WriteLine("si mutati toate elementele nule la capatul drept al vectorului printr o singura parcurgere a sa");
-     
+
             i = 0;
-            
+
             while (i < n)
             {
-               
+
                 zero = 0;
                 while (i < n && v[i] == 0)
                 {
@@ -496,12 +496,12 @@ namespace Setul_3
                             indice_nul++;
                         else
                             indice_nul = -1;
-                    }                  
+                    }
                 }
                 else
 
                     if (i < n)
-                    {
+                {
                     if (indice_nul != -1)
                     {
                         if (indice_nul < i - zero) ///indice_nul e deobicei < i - zero, si deci, prima pozitie ce se ea in considerare, 
@@ -534,9 +534,9 @@ namespace Setul_3
                             indice_nul = i - zero + 1;
 
                     }
-                    
-                    }
-                  i++;
+
+                }
+                i++;
             }
             Console.WriteLine("Vectorul actualizat este: ");
             for (i = 0; i < n; i++)
@@ -564,9 +564,9 @@ namespace Setul_3
                     if (v[i] == v[j])
                     {
                         for (int k = j; k < n - 1; k++)
-                        
+
                             v[k] = v[k + 1];
-                        
+
                         v[n - 1] = null;
                         n--;
 
@@ -620,10 +620,10 @@ namespace Setul_3
             Console.WriteLine();
 
         }
-  
+
         private static void conversie(int n, int b)
         {
-            if(n != 0)
+            if (n != 0)
             {
                 conversie(n / b, b);
                 if (n % b > 9)
@@ -650,7 +650,7 @@ namespace Setul_3
             }
 
         }
-        
+
         private static void ex_17()
         {
             Console.WriteLine("Dati un numar de la tastatura convertit in baza 10 si b, o baza de numeratie: 16<=b<=2 ");
@@ -659,7 +659,7 @@ namespace Setul_3
             Console.WriteLine("Numarul convertit e: ");
 
             conversie(n, b);
-  
+
             Console.WriteLine();
         }
         private static long termen(int n, long[] v, int i, long x, int exp)
@@ -842,7 +842,7 @@ namespace Setul_3
             Console.WriteLine("Cititi doua nr n, m, dimensiunile a doi vectori");
             n = int.Parse(Console.ReadLine());
             m = int.Parse(Console.ReadLine());
-         
+
             int?[] a = new int?[n];
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele din primul vector");
             for (i = 0; i < n; i++)
@@ -865,7 +865,7 @@ namespace Setul_3
             m = stergere_elemente_duplicate(b, m);
 
             ///<aflam lungimea elementelor din urmatorii noi 2 vectori dif_a[], dif_b[] ce reprezinta diferentele dintre cei 2 vectori din cerinta
-            int lungime_dif_a = 0, lungime_dif_b = 0, lungime_reuniune = 0;   
+            int lungime_dif_a = 0, lungime_dif_b = 0, lungime_reuniune = 0;
             lungime_dif_a = diferente_x_y_lungime(a, b, n, m, lungime_dif_a);
             lungime_dif_b = diferente_x_y_lungime(b, a, m, n, lungime_dif_b);
 
@@ -876,26 +876,26 @@ namespace Setul_3
             }
             else
                 if (lungime_dif_a == 0)
-                {
-                    reuniune = new int?[m];
-                }
-                else
+            {
+                reuniune = new int?[m];
+            }
+            else
                     if (lungime_dif_b == 0)
-                    {
-                        reuniune = new int?[n];
-                    }
-                    else
-                        {
-                            reuniune = new int?[lungime_dif_a + lungime_dif_b + (n - lungime_dif_a)];
-                        }
-            
+            {
+                reuniune = new int?[n];
+            }
+            else
+            {
+                reuniune = new int?[lungime_dif_a + lungime_dif_b + (n - lungime_dif_a)];
+            }
+
             if (lungime_dif_a != 0)
             {
 
                 int?[] dif_a = new int?[lungime_dif_a];
                 diferente_x_y(a, dif_a, b, n, m);
                 int lungime_inter = n - lungime_dif_a;
-               
+
                 Console.WriteLine();
 
                 if (lungime_inter > 0)
@@ -940,7 +940,7 @@ namespace Setul_3
 
                 if (lungime_dif_a == 0)
                 {
-                    
+
                     Console.WriteLine("v1 intersectat cu v2: ");
                     for (i = 0; i < n; i++)
                     {
@@ -948,20 +948,20 @@ namespace Setul_3
                         reuniune[lungime_reuniune] = a[i];
                         lungime_reuniune++;
                     }
-                
+
 
                 }
-                    Console.WriteLine();
-                    Console.WriteLine("v2 - v1: ");
-                    for (i = 0; i < lungime_dif_b; i++)
-                    {
-                        Console.Write(dif_b[i] + " ");
-                        reuniune[lungime_reuniune] = dif_b[i];
-                        lungime_reuniune++;
+                Console.WriteLine();
+                Console.WriteLine("v2 - v1: ");
+                for (i = 0; i < lungime_dif_b; i++)
+                {
+                    Console.Write(dif_b[i] + " ");
+                    reuniune[lungime_reuniune] = dif_b[i];
+                    lungime_reuniune++;
 
-                    }
-                
-               
+                }
+
+
             }
             else
                 Console.WriteLine("v2 - v1 este multimea vida ");
@@ -978,10 +978,10 @@ namespace Setul_3
                     lungime_reuniune++;
                 }
             }
-                Console.WriteLine("v1 U V2: ");
-                for (i = 0; i < lungime_reuniune; i++)
-                    Console.Write(reuniune[i] + " ");
-            
+            Console.WriteLine("v1 U V2: ");
+            for (i = 0; i < lungime_reuniune; i++)
+                Console.Write(reuniune[i] + " ");
+
             Console.WriteLine();
 
         }
@@ -1009,7 +1009,7 @@ namespace Setul_3
             Console.WriteLine("si aflati reuniunia, intersectia si diferentele dintre cei doi vectori v1-v2 si v2 -v1");
             Console.WriteLine();
             ///<aflam lungimea elementelor din urmatorii noi 2 vectori, dif_a[], dif_b[] ce reprezinta diferentele dintre cei 2 vectori din cerinta>
-           
+
             int lungime_dif_a = 0, lungime_dif_b = 0;
 
             lungime_dif_a = diferente_x_y_lungime_0(a, b, n, m, lungime_dif_a);
@@ -1020,8 +1020,8 @@ namespace Setul_3
                 int[] dif_a = new int[lungime_dif_a];
                 diferente_x_y_0(a, dif_a, b, n, m);
                 int lungime_inter = n - lungime_dif_a;
-                
-                if (lungime_inter!= 0)
+
+                if (lungime_inter != 0)
                 {
                     int[] inter = new int[lungime_inter];
                     diferente_x_y_0(a, inter, dif_a, n, lungime_dif_a);
@@ -1080,7 +1080,7 @@ namespace Setul_3
                 for (i = 0; i < n; i++)
                     Console.Write(a[i] + " ");
             }
-        
+
 
             Console.WriteLine();
             i = 0; j = 0;
@@ -1095,8 +1095,8 @@ namespace Setul_3
                 else
                 if (a[i] > b[j])
                 {
-                     Console.Write(b[j] + " ");
-                     j++;
+                    Console.Write(b[j] + " ");
+                    j++;
 
                 }
                 else
@@ -1106,21 +1106,21 @@ namespace Setul_3
                     j++;
                 }
             }
-           
-                while (i < n)
-                {
-                    Console.Write(a[i] + " ");
-                    i++;
-                }
-          
-                    while (j < m)
-                    {
-                        Console.Write(b[j] + " ");
-                        j++;
-                    }
-           
-                    Console.WriteLine();
-               
+
+            while (i < n)
+            {
+                Console.Write(a[i] + " ");
+                i++;
+            }
+
+            while (j < m)
+            {
+                Console.Write(b[j] + " ");
+                j++;
+            }
+
+            Console.WriteLine();
+
         }
         private static void ex_24()
         {
@@ -1134,14 +1134,14 @@ namespace Setul_3
                 n = m;
                 m = aux;
             }
-            int[] a = new int[n+2];
+            int[] a = new int[n + 2];
 
-            int[] b = new int[m+2];
-            
-          
+            int[] b = new int[m + 2];
+
+
 
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele din primul vector");
-            for (i = 0; i <= n ; i++)
+            for (i = 0; i <= n; i++)
             {
                 x = int.Parse(Console.ReadLine());
                 if (x == 1)
@@ -1151,7 +1151,7 @@ namespace Setul_3
             }
 
             Console.WriteLine("respectiv elementele din al doilea vector");
-            for (i = 0; i <= m ; i++)
+            for (i = 0; i <= m; i++)
             {
                 x = int.Parse(Console.ReadLine());
                 if (x == 1)
@@ -1167,10 +1167,10 @@ namespace Setul_3
             for (i = 0; i <= m; i++)
                 if (a[i] == 1 || b[i] == 1)
                     Console.Write(i + " ");
-            for (i = m+1; i <= n; i++)
+            for (i = m + 1; i <= n; i++)
                 if (a[i] == 1)
                     Console.Write(i + " ");
-                
+
             Console.WriteLine();
             Console.WriteLine("v1 intersectat cu v2: ");
             for (i = 0; i <= m; i++)
@@ -1224,9 +1224,9 @@ namespace Setul_3
             }
             Console.WriteLine("si interclasati cei 2 vectori: ");
 
-        
-            i = 0; j = 0; int k = 0;
-            while(i < n && j < m) ///ne folosim de unul dintre pasii algoritmului MergeSort
+
+            i = 0; j = 0; 
+            while (i < n && j < m) ///ne folosim de unul dintre pasii algoritmului MergeSort
             {
                 if (a[i] < b[j])
                 {
@@ -1234,28 +1234,27 @@ namespace Setul_3
                     i++;
                 }
                 else
-                    {
-                       Console.Write(b[j] + " ");
-                        j++;
-                    }
-                k++;
-            }
-            
-                while(j < m)
                 {
                     Console.Write(b[j] + " ");
                     j++;
-                    k++;
                 }
-         
-                    while (i < n)
-                    {
-                        Console.Write(a[i] + " ");
-                        i++;
-                        k++;
-                    }
-           
-                    
+               
+            }
+
+            while (j < m)
+            {
+                Console.Write(b[j] + " ");
+                j++;
+                
+            }
+
+            while (i < n)
+            {
+                Console.Write(a[i] + " ");
+                i++;
+            }
+
+
             Console.WriteLine();
         }
         private static void ex_26()
@@ -1263,7 +1262,7 @@ namespace Setul_3
             int n, m, x, i, j;
             bool neg = false;
             Console.WriteLine("Cititi doua nr n, m, dimensiunile a doi vectori");
-           
+
             n = int.Parse(Console.ReadLine());
             m = int.Parse(Console.ReadLine());
             if (n < m)
@@ -1273,7 +1272,7 @@ namespace Setul_3
                 n = m;
                 m = aux;
             }
-           
+
             int[] a = new int[n];
             int[] Sum = new int[n];
             int[] Dif = new int[n];
@@ -1296,10 +1295,10 @@ namespace Setul_3
                 b[i] = x;
 
             }
-        
+
             Console.WriteLine();
             Console.WriteLine("si aflati suma, diferenta si produsul nr reprezentate de cifrele din cei doi vectori");
-           
+
 
             ///1) SUMA
             bool carry = false;
@@ -1357,104 +1356,104 @@ namespace Setul_3
 
             ///2) DIFERENTA
 
-                if (!neg && n == m)                  
-                    {
-                        if (a[0] == b[0])
-                        {
-                            i = 1;
-                            while (i < n && a[i] == b[i])
-                                i++;
-                            if (a[i] < b[i])
-                                neg = true;
-                        }
-                        else
-                            if (a[0] < b[0])
-                                neg = true;
-                        if (neg)
-                        {
-                            for (i = 0; i < n; i++)
-                            {
-                                int aux = a[i];
-                                a[i] = b[i];
-                                b[i] = aux;
-                            }
-                        }
-                    }
-                        
-                carry = false;
-                for (i = n - 1; i > n - m - 1; i--)
+            if (!neg && n == m)
+            {
+                if (a[0] == b[0])
                 {
-                    if (a[i] - b[m - 1 - (n - 1 - i)] < 0)
+                    i = 1;
+                    while (i < n && a[i] == b[i])
+                        i++;
+                    if (a[i] < b[i])
+                        neg = true;
+                }
+                else
+                    if (a[0] < b[0])
+                    neg = true;
+                if (neg)
+                {
+                    for (i = 0; i < n; i++)
                     {
-                        if (carry)
+                        int aux = a[i];
+                        a[i] = b[i];
+                        b[i] = aux;
+                    }
+                }
+            }
+
+            carry = false;
+            for (i = n - 1; i > n - m - 1; i--)
+            {
+                if (a[i] - b[m - 1 - (n - 1 - i)] < 0)
+                {
+                    if (carry)
+
+                        Dif[i] = a[i] + 10 - b[m - 1 - (n - 1 - i)] - 1;
+
+                    else
+                    {
+                        Dif[i] = a[i] + 10 - b[m - 1 - (n - 1 - i)];
+                        carry = true;
+                    }
+                }
+                else
+                {
+                    if (carry)
+                    {
+                        if (a[i] - b[m - 1 - (n - 1 - i)] - 1 < 0)
 
                             Dif[i] = a[i] + 10 - b[m - 1 - (n - 1 - i)] - 1;
 
                         else
                         {
-                            Dif[i] = a[i] + 10 - b[m - 1 - (n - 1 - i)];
-                            carry = true;
+                            Dif[i] = a[i] - b[m - 1 - (n - 1 - i)] - 1;
+                            carry = false;
                         }
                     }
                     else
-                    {
-                        if (carry)
-                        {
-                            if (a[i] - b[m - 1 - (n - 1 - i)] - 1 < 0)
+                        Dif[i] = a[i] - b[m - 1 - (n - 1 - i)];
 
-                                Dif[i] = a[i] + 10 - b[m - 1 - (n - 1 - i)] - 1;
-
-                            else
-                            {
-                                Dif[i] = a[i] - b[m - 1 - (n - 1 - i)] - 1;
-                                carry = false;
-                            }
-                        }
-                        else
-                            Dif[i] = a[i] - b[m - 1 - (n - 1 - i)];
-
-                    }
-                    
                 }
 
-                Console.WriteLine();
-                Console.WriteLine();
-                Console.WriteLine("Diferenta este: ");
+            }
 
-                if (neg)
+            Console.WriteLine();
+            Console.WriteLine();
+            Console.WriteLine("Diferenta este: ");
 
-                    Console.Write("-");
+            if (neg)
 
-                if (i == -1)// nr de cifre al primului vector, e egal cu cel de-al celui de al doilea vector
-                {
-                    i = 0;
+                Console.Write("-");
 
-                    while (i < n && Dif[i] == 0)
-                        i++;
-                    if (i == n)
-                        Console.Write(0);///nr identice
-                    else
-                        for (j = i; j < n; j++)
-                            Console.Write(Dif[j]);
-                }
+            if (i == -1)// nr de cifre al primului vector, e egal cu cel de-al celui de al doilea vector
+            {
+                i = 0;
+
+                while (i < n && Dif[i] == 0)
+                    i++;
+                if (i == n)
+                    Console.Write(0);///nr identice
                 else
+                    for (j = i; j < n; j++)
+                        Console.Write(Dif[j]);
+            }
+            else
+            {
+                for (j = i; j > 0; j--)///nu mai sunt cifre in al doilea vector
                 {
-                    for (j = i; j > 0; j--)///nu mai sunt cifre in al doilea vector
+                    if (carry)
                     {
-                        if (carry)
+                        if (a[j] != 0)
                         {
-                            if (a[j] != 0)
-                            {
-                                Dif[j] = a[j] - 1;
-                                carry = false;
-                            }
-                            else
-                                Dif[j] = 9;
+                            Dif[j] = a[j] - 1;
+                            carry = false;
                         }
                         else
-                            Dif[j] = a[j];
-
+                            Dif[j] = 9;
                     }
+                    else
+                        Dif[j] = a[j];
+
+                }
 
                 if (carry)
                 {
@@ -1464,10 +1463,10 @@ namespace Setul_3
                 else
                     Console.Write(a[0]);
 
-                        for (i = 1; i < n; i++)
-                            Console.Write(Dif[i]);                       
-                }               
-            
+                for (i = 1; i < n; i++)
+                    Console.Write(Dif[i]);
+            }
+
             Console.WriteLine();
             Console.WriteLine();
             ///3) PRODUSUL
@@ -1475,29 +1474,29 @@ namespace Setul_3
 
             long Suma_produse = 0, Produs, pow; int carry_cif = 0;
             int k;
-          for(i = m - 1; i >= 0; i --)
-          {
-              Produs= 0;              
-              pow = 1;
-              for (j = n - 1; j >= 0; j--)
-              {
+            for (i = m - 1; i >= 0; i--)
+            {
+                Produs = 0;
+                pow = 1;
+                for (j = n - 1; j >= 0; j--)
+                {
                     Produs = ((b[i] * a[j] + carry_cif) % 10) * pow + Produs;
-                  carry_cif = (b[i] * a[j] + carry_cif) / 10;
-                  pow *= 10;
-              }
-              if (carry_cif != 0)
-              {
-                  Produs = carry_cif * pow + Produs;
-                  carry_cif = 0;
-              }
-              for (k= 0; k < m - 1 - i; k++)
-                  Produs *= 10;
+                    carry_cif = (b[i] * a[j] + carry_cif) / 10;
+                    pow *= 10;
+                }
+                if (carry_cif != 0)
+                {
+                    Produs = carry_cif * pow + Produs;
+                    carry_cif = 0;
+                }
+                for (k = 0; k < m - 1 - i; k++)
+                    Produs *= 10;
 
-              Suma_produse += Produs;
+                Suma_produse += Produs;
 
-          }
-          
-           Console.Write(Suma_produse);
+            }
+
+            Console.Write(Suma_produse);
 
 
             ///<summary> <VAR II>
@@ -1620,7 +1619,7 @@ namespace Setul_3
         }
         private static void ex_27()
         {
-          
+
             int n, k, x;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector si k, o pozitie din vector");
             n = int.Parse(Console.ReadLine());
@@ -1645,13 +1644,13 @@ namespace Setul_3
 
             }
             Console.WriteLine($"Numarul aflat pe poz {k} este: {v[k]}");
-            
+
             Console.WriteLine();
         }
         private static int partitie(int[] v, int n, int stg, int dr)
         {
             int aux, i = stg - 1, j = stg;
-            while(j < dr)
+            while (j < dr)
             {
                 if (v[j] < v[dr])
                 {
@@ -1664,25 +1663,25 @@ namespace Setul_3
             }
             aux = v[i + 1];
             v[i + 1] = v[dr];
-            v[dr]= aux;
-           return i + 1;
+            v[dr] = aux;
+            return i + 1;
         }
         private static void Quicksort(int[] v, int n, int stg, int dr)
         {
-            if(stg < dr)
+            if (stg < dr)
             {
                 int pivot = partitie(v, n, stg, dr);
                 Quicksort(v, n, stg, pivot - 1);
                 Quicksort(v, n, pivot + 1, dr);
             }
         }
-        
+
         private static void ex_28()
         {
             int n, x;
             Console.WriteLine("Cititi un nr n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
-            
+
             int[] v = new int[n];
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele vectorului");
             for (int i = 0; i < n; i++)
@@ -1692,8 +1691,8 @@ namespace Setul_3
             }
 
             Console.WriteLine("si ordonati vectorul folosindu va de algoritmul de sortare Quicksort: ");
-           
-            Quicksort(v, n, 0, n-1);
+
+            Quicksort(v, n, 0, n - 1);
 
             for (int i = 0; i < n; i++)
                 Console.Write(v[i] + " ");
@@ -1715,22 +1714,22 @@ namespace Setul_3
                 R[i] = v[mij + 1 + i];
             i = j = 0;
 
-            while(i < n1 && j < n2)
+            while (i < n1 && j < n2)
             {
                 if (L[i] < R[j])
                 {
-                    v[k] = L[i];                    
+                    v[k] = L[i];
                     i++;
                 }
                 else
-                    {
-                        v[k] = R[j];
-                        j++;                   
-                        
-                    }
+                {
+                    v[k] = R[j];
+                    j++;
+
+                }
                 k++;
             }
-            while(i < n1)
+            while (i < n1)
             {
                 v[k] = L[i];
                 k++;
@@ -1745,11 +1744,11 @@ namespace Setul_3
         }
         private static void sortare(int[] v, int n, int stg, int dr)
         {
-            if(stg < dr)
+            if (stg < dr)
             {
                 int mij = stg + (dr - stg) / 2;
                 sortare(v, n, stg, mij);
-                sortare(v, n, mij+1, dr);
+                sortare(v, n, mij + 1, dr);
                 merge(v, n, stg, mij, dr);
             }
         }
@@ -1775,14 +1774,14 @@ namespace Setul_3
                 Console.Write(v[i] + " ");
             Console.WriteLine();
         }
-       
-       
+
+
         private static void ex_30()
         {
             int n, x, i, j, aux;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
-            
+
             int[] E = new int[n];
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele din primul vector");
             for (i = 0; i < n; i++)
@@ -1799,12 +1798,12 @@ namespace Setul_3
             }
             Console.WriteLine("si ordonati ambii vectori, in asa fel incat doua elemente identice din primul vector vor fi sortate in functie de ponderi, cea mai mare fiind prima");
             i = 0;
-            while(i < n - 1)
+            while (i < n - 1)
             {
                 j = i + 1;
-                while (j > 0 && E[j-1] >= E[j] )
+                while (j > 0 && E[j - 1] >= E[j])
                 {
-                    if (E[j-1] > E[j] || (E[j-1] == E[j] && W[j] > W[j - 1]))
+                    if (E[j - 1] > E[j] || (E[j - 1] == E[j] && W[j] > W[j - 1]))
                     {
                         aux = E[j - 1];
                         E[j - 1] = E[j];
@@ -1822,7 +1821,7 @@ namespace Setul_3
             Console.WriteLine();
 
 
-            Console.WriteLine("Ponderile ordonate sunt: ");        
+            Console.WriteLine("Ponderile ordonate sunt: ");
             for (i = 0; i < n; i++)
                 Console.Write(W[i] + " ");
 
@@ -1853,7 +1852,7 @@ namespace Setul_3
 
 
             int elem = v[0], nrap = 1, NRAP = 0;
-            for(int i = 1; i < n; i++)
+            for (int i = 1; i < n; i++)
             {
                 if (nrap == 0)
                 {
@@ -1862,9 +1861,9 @@ namespace Setul_3
                 }
                 else
                     if (v[i] == elem)
-                        nrap++;
-                    else
-                        nrap--;
+                    nrap++;
+                else
+                    nrap--;
             }
 
             for (int i = 0; i < n; i++)
@@ -1877,5 +1876,5 @@ namespace Setul_3
             Console.WriteLine();
         }
     }
-    
+
 }
