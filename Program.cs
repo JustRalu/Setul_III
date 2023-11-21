@@ -21,7 +21,7 @@ namespace Setul_3
 
         static void Main(string[] args)
         {
-            /*ex_1();
+            ex_1();
             ex_2();
             ex_3();
             ex_4();
@@ -45,13 +45,13 @@ namespace Setul_3
             ex_22();
             ex_23();
             ex_24();
-            ex_25();*/
+            ex_25();
             ex_26();
-           /*ex_27();
+            ex_27();
             ex_28();
             ex_29();
             ex_30();
-            ex_31();*/
+            ex_31();
 
             Console.ReadKey();
         }
