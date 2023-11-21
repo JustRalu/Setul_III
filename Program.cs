@@ -1363,7 +1363,7 @@ namespace Setul_3
                     i = 1;
                     while (i < n && a[i] == b[i])
                         i++;
-                    if (a[i] < b[i])
+                    if (i < n && a[i] < b[i])
                         neg = true;
                 }
                 else
