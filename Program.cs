@@ -21,7 +21,7 @@ namespace Setul_3
 
         static void Main(string[] args)
         {
-            ex_1();
+            /*ex_1();
             ex_2();
             ex_3();
             ex_4();
@@ -45,13 +45,13 @@ namespace Setul_3
             ex_22();
             ex_23();
             ex_24();
-            ex_25();
+            ex_25();*/
             ex_26();
-            ex_27();
+           /*ex_27();
             ex_28();
             ex_29();
             ex_30();
-            ex_31();
+            ex_31();*/
 
             Console.ReadKey();
         }
@@ -1472,98 +1472,68 @@ namespace Setul_3
             ///3) PRODUSUL
             Console.WriteLine("Produsul este: ");
 
-            long Suma_produse = 0, Produs, pow; int carry_cif = 0;
-            int k;
-            for (i = m - 1; i >= 0; i--)
-            {
-                Produs = 0;
-                pow = 1;
-                for (j = n - 1; j >= 0; j--)
-                {
-                    Produs = ((b[i] * a[j] + carry_cif) % 10) * pow + Produs;
-                    carry_cif = (b[i] * a[j] + carry_cif) / 10;
-                    pow *= 10;
-                }
-                if (carry_cif != 0)
-                {
-                    Produs = carry_cif * pow + Produs;
-                    carry_cif = 0;
-                }
-                for (k = 0; k < m - 1 - i; k++)
-                    Produs *= 10;
 
-                Suma_produse += Produs;
-
-            }
-
-            Console.Write(Suma_produse);
-
-
-            ///<summary> <VAR II>
-            /*int[] Produs = new int[n + m];///produsul dintre cei doi vectori represinta suma de (numarul de cifre ale lui m) produse
+            int[] Produs = new int[n + m]; ///produsul dintre cei doi vectori represinta suma de (numarul de cifre ale lui m) produse
            int poz = 1;
            int[] a1 = new int[n + m];
            int[] b1 = new int[n + m];
            int contor_produs, carry_cif, k;
-            int k1 = -1, n1, n2;
             
 
            for (i = 0; i < n + m; i++)
               b1[i] = 0;
 
-           for (i = m - 1; i >= 0; i++)
+           for (i = m - 1; i >= 0; i--)
            {
-                n2 = b[i];
+               
                carry_cif = 0;
-               contor_produs = n + m - 1;
-                k1 ++;
-
-                for (k = 0; i < n + m; i++)
+              
+                for (k = 0; k < n + m; k++)
                     a1[k] = 0;
 
                     for (j = n - 1; j >= 0; j--)
                     {
-                    n1 = a[j]; 
                     
-                        if (n1 * n2 > 9)
+                    
+                        if (b[i] * a[j] > 9)
                         {
                             if (carry_cif != 0)
                             {
-                                a1[contor_produs - k1] = (n1 * n2 + carry_cif) % 10;
-                                carry_cif =( n1 * n2 + carry_cif) / 10;
+                                a1[i + j + 1] = (b[i] * a[j] + carry_cif) % 10;
+                                carry_cif =(b[i] * a[j] + carry_cif) / 10;
                             }
                             else
                                 {
-                                    a1[contor_produs - k1] = (n1* n2) % 10;
-                                    carry_cif = (n1* n2) / 10;
+                                    a1[i + j + 1] = (b[i] * a[j]) % 10;
+                                    carry_cif = (b[i] * a[j]) / 10;
                                 }
                         }
                         else
                             {
                                 if (carry_cif != 0)
                                 {
-                                    a1[contor_produs-k1] =( n1 * n2 + carry_cif) % 10;
-                                    if (n1 * n2 + carry_cif <= 9)
+                                    a1[i + j + 1] =(b[i] * a[j] + carry_cif) % 10;
+                                    if (b[i] * a[j] + carry_cif <= 9)
                                         carry_cif = 0;
                                     else
-                                        carry_cif = (n1 * n2 + carry_cif) / 10; 
-                            }
+                                        carry_cif = (b[i] * a[j] + carry_cif) / 10; 
+                                }
 
                                else
-                                    a1[contor_produs-k1] = (n1* n2) % 10;
+                                    a1[i + j + 1] = (b[i] * a[j]) % 10;
                             }   
-                         contor_produs--;
+                         
                     }
 
 
                 if (carry_cif != 0)
-
                 {
-                    a1[contor_produs - k1] = carry_cif;
-                    poz = contor_produs - k1;
+
+                    a1[i] = carry_cif;
+                    poz = i;
                 }
                 else
-                    poz = contor_produs - k1 + 1;
+                    poz = i + 1;
 
                 carry = false;
                
@@ -1595,7 +1565,6 @@ namespace Setul_3
 
                 }
                 if (carry)
-
                 {
                     Produs[k] = 1;
                     poz = k;
@@ -1610,9 +1579,9 @@ namespace Setul_3
                 
 
            }
-            
+         
            for (i = poz; i < n + m; i++)
-               Console.Write(Produs[i]);*/
+               Console.Write(Produs[i]);
             Console.WriteLine();
 
 
