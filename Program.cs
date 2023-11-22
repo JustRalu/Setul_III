@@ -1466,9 +1466,10 @@ namespace Setul_3
                 for (i = 1; i < n; i++)
                     Console.Write(Dif[i]);
             }
+            Console.WriteLine();
+            Console.WriteLine();
 
-            Console.WriteLine();
-            Console.WriteLine();
+            
             ///3) PRODUSUL
             Console.WriteLine("Produsul este: ");
 
