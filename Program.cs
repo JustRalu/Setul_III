@@ -1477,7 +1477,7 @@ namespace Setul_3
            int poz = 1;
            int[] a1 = new int[n + m];
            int[] b1 = new int[n + m];
-           int contor_produs, carry_cif, k;
+           int carry_cif, k;
             
 
            for (i = 0; i < n + m; i++)
