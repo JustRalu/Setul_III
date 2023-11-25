@@ -621,7 +621,7 @@ namespace Setul_3
 
         }
 
-        private static void conversie(int n, int b)
+        private static void conversie(long n, int b)
         {
             if (n != 0)
             {
@@ -654,7 +654,7 @@ namespace Setul_3
         private static void ex_17()
         {
             Console.WriteLine("Dati un numar de la tastatura convertit in baza 10 si b, o baza de numeratie: 16<=b<=2 ");
-            int n = int.Parse(Console.ReadLine()), b = int.Parse(Console.ReadLine());
+            long n = long.Parse(Console.ReadLine()), b = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Numarul convertit e: ");
 
