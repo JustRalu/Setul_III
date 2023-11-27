@@ -338,12 +338,12 @@ namespace Setul_3
         private static void ex_10()
         {
             int n, x, stg = 0, dr, mij, k;
-            Console.WriteLine("Cititi doua nr naturale nenule n, dimensiunea unui vector si k, un posibil elem din vector");
+            Console.WriteLine("Cititi doua nr naturale nenule n, dimensiunea unui vector sortat crescator si k, un posibil elem din vector");
             n = int.Parse(Console.ReadLine());
             dr = n - 1;
             k = int.Parse(Console.ReadLine());
             Console.WriteLine();
-            Console.WriteLine("apoi elementele vectorului sortate crescator");
+            Console.WriteLine("apoi elementele vectorului:");
             int[] v = new int[n];
             for (int i = 0; i < n; i++)
             {
@@ -654,7 +654,8 @@ namespace Setul_3
         private static void ex_17()
         {
             Console.WriteLine("Dati un numar de la tastatura convertit in baza 10 si b, o baza de numeratie: 16<=b<=2 ");
-            long n = long.Parse(Console.ReadLine()), b = int.Parse(Console.ReadLine());
+            long n = long.Parse(Console.ReadLine());
+            int b = int.Parse(Console.ReadLine());
 
             Console.WriteLine("Numarul convertit e: ");
 
@@ -712,13 +713,13 @@ namespace Setul_3
                 a[i] = x;
             }
             int[] b = new int[m];
-            Console.WriteLine($"respectiv elementele din vectorul b, de dimensiune {m}");
+            Console.WriteLine($"respectiv elementele din vectorul b, de dimensiune {m} si aflati de cate ori se repeta al doilea vector in primul");
             for (i = 0; i < m; i++)
             {
                 x = int.Parse(Console.ReadLine());
                 b[i] = x;
             }
-            Console.WriteLine("si aflati de cate ori se repeta al doilea vector in primul");
+           
             while (i + m <= n)
             {
                 if (b[0] == a[i])
@@ -1225,7 +1226,7 @@ namespace Setul_3
             Console.WriteLine("si interclasati cei 2 vectori: ");
 
 
-            i = 0; j = 0; 
+            i = 0; j = 0;
             while (i < n && j < m) ///ne folosim de unul dintre pasii algoritmului MergeSort
             {
                 if (a[i] < b[j])
@@ -1238,14 +1239,14 @@ namespace Setul_3
                     Console.Write(b[j] + " ");
                     j++;
                 }
-               
+
             }
 
             while (j < m)
             {
                 Console.Write(b[j] + " ");
                 j++;
-                
+
             }
 
             while (i < n)
@@ -1469,62 +1470,62 @@ namespace Setul_3
             Console.WriteLine();
             Console.WriteLine();
 
-            
+
             ///3) PRODUSUL
             Console.WriteLine("Produsul este: ");
 
 
             int[] Produs = new int[n + m]; ///produsul dintre cei doi vectori represinta suma de (numarul de cifre ale lui m) produse
-           int poz = 1;
-           int[] a1 = new int[n + m];
-           int[] b1 = new int[n + m];
-           int carry_cif, k;
-            
+            int poz = 1;
+            int[] a1 = new int[n + m];
+            int[] b1 = new int[n + m];
+            int carry_cif, k;
 
-           for (i = 0; i < n + m; i++)
-              b1[i] = 0;
 
-           for (i = m - 1; i >= 0; i--)
-           {
-               
-               carry_cif = 0;
-              
+            for (i = 0; i < n + m; i++)
+                b1[i] = 0;
+
+            for (i = m - 1; i >= 0; i--)
+            {
+
+                carry_cif = 0;
+
                 for (k = 0; k < n + m; k++)
                     a1[k] = 0;
 
-                    for (j = n - 1; j >= 0; j--)
+                for (j = n - 1; j >= 0; j--)
+                {
+
+
+                    if (b[i] * a[j] > 9)
                     {
-                    
-                    
-                        if (b[i] * a[j] > 9)
+                        if (carry_cif != 0)
                         {
-                            if (carry_cif != 0)
-                            {
-                                a1[i + j + 1] = (b[i] * a[j] + carry_cif) % 10;
-                                carry_cif =(b[i] * a[j] + carry_cif) / 10;
-                            }
-                            else
-                                {
-                                    a1[i + j + 1] = (b[i] * a[j]) % 10;
-                                    carry_cif = (b[i] * a[j]) / 10;
-                                }
+                            a1[i + j + 1] = (b[i] * a[j] + carry_cif) % 10;
+                            carry_cif = (b[i] * a[j] + carry_cif) / 10;
                         }
                         else
-                            {
-                                if (carry_cif != 0)
-                                {
-                                    a1[i + j + 1] =(b[i] * a[j] + carry_cif) % 10;
-                                    if (b[i] * a[j] + carry_cif <= 9)
-                                        carry_cif = 0;
-                                    else
-                                        carry_cif = (b[i] * a[j] + carry_cif) / 10; 
-                                }
-
-                               else
-                                    a1[i + j + 1] = (b[i] * a[j]) % 10;
-                            }   
-                         
+                        {
+                            a1[i + j + 1] = (b[i] * a[j]) % 10;
+                            carry_cif = (b[i] * a[j]) / 10;
+                        }
                     }
+                    else
+                    {
+                        if (carry_cif != 0)
+                        {
+                            a1[i + j + 1] = (b[i] * a[j] + carry_cif) % 10;
+                            if (b[i] * a[j] + carry_cif <= 9)
+                                carry_cif = 0;
+                            else
+                                carry_cif = (b[i] * a[j] + carry_cif) / 10;
+                        }
+
+                        else
+                            a1[i + j + 1] = (b[i] * a[j]) % 10;
+                    }
+
+                }
 
 
                 if (carry_cif != 0)
@@ -1537,32 +1538,32 @@ namespace Setul_3
                     poz = i + 1;
 
                 carry = false;
-               
+
                 for (k = n + m - 1; k >= poz; k--)
                 {
-                   
-                        if (a1[k] + b1[k] >= 10)
-                        {
-                            if (carry)
-                                Produs[k] = (a1[k] + b1[k] + 1) % 10;
-                            else
-                            {
-                                Produs[k] = (a1[k] + b1[k]) % 10;
-                                carry = true;
-                            }
-                        }
+
+                    if (a1[k] + b1[k] >= 10)
+                    {
+                        if (carry)
+                            Produs[k] = (a1[k] + b1[k] + 1) % 10;
                         else
                         {
-                            if (carry)
-                            {
-                                if (a1[k] + b1[k] + 1 < 10)
-                                    carry = false;
-                                Produs[k] = (a1[k] + b1[k] + 1) % 10;
-                            }
-
-                            else
-                                Produs[k] = a1[k] + b1[k];
+                            Produs[k] = (a1[k] + b1[k]) % 10;
+                            carry = true;
                         }
+                    }
+                    else
+                    {
+                        if (carry)
+                        {
+                            if (a1[k] + b1[k] + 1 < 10)
+                                carry = false;
+                            Produs[k] = (a1[k] + b1[k] + 1) % 10;
+                        }
+
+                        else
+                            Produs[k] = a1[k] + b1[k];
+                    }
 
                 }
                 if (carry)
@@ -1573,16 +1574,16 @@ namespace Setul_3
                 }
                 else
                     poz = k + 1;
-                  
-                    for (k = poz; k < n + m; k++)
-                   
-                        b1[k] = Produs[k];
-                
 
-           }
-         
-           for (i = poz; i < n + m; i++)
-               Console.Write(Produs[i]);
+                for (k = poz; k < n + m; k++)
+
+                    b1[k] = Produs[k];
+
+
+            }
+
+            for (i = poz; i < n + m; i++)
+                Console.Write(Produs[i]);
             Console.WriteLine();
 
 
