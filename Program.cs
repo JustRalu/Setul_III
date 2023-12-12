@@ -1425,7 +1425,7 @@ namespace Setul_3
 
                 Console.Write("-");
 
-            if (i == -1)// nr de cifre al primului vector, e egal cu cel de-al celui de al doilea vector
+            if (i == -1)// nr de cifre al primului vector e egal cu cel de-al celui de al doilea vector
             {
                 i = 0;
 
