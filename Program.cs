@@ -59,7 +59,7 @@ namespace Setul_3
 
         private static void ex_1()
         {
-            int n, x;
+            int n;
             long S = 0;
             Console.WriteLine("Cititi un numar natural nenul n, dimensiunea unui vector,");
             n = int.Parse(Console.ReadLine());
@@ -67,8 +67,7 @@ namespace Setul_3
             Console.WriteLine("apoi elementele vectorului");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
                 S += v[i];
 
             }
@@ -80,7 +79,7 @@ namespace Setul_3
 
         private static void ex_2()
         {
-            int n, k, x, i;
+            int n, k, i;
             Console.WriteLine("Cititi un numar natural nenul n, dimensiunea unui vector si un numar k");
             n = int.Parse(Console.ReadLine());
             k = int.Parse(Console.ReadLine());
@@ -88,9 +87,8 @@ namespace Setul_3
             Console.WriteLine("apoi elementele vectorului");
             for (i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
-
+                v[i] = int.Parse(Console.ReadLine());
+             
             }
             Console.WriteLine($"si aflati prima pozitie pe care se afla {k}");
             for (i = 0; i < n; i++)
@@ -113,13 +111,13 @@ namespace Setul_3
             Console.WriteLine("Cititi un numar natural nenul n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
             Console.WriteLine("apoi elementele vectorului");
-            x = int.Parse(Console.ReadLine());
-            min = max = x;
             int[] v = new int[n];
+            x = int.Parse(Console.ReadLine());
+            v[0] = x;
+            min = max = x;           
             for (int i = 1; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
 
             }
             Console.WriteLine($"si aflati prima pozitie pe care se afla minimul, respectiv maximul din vector");
@@ -150,10 +148,12 @@ namespace Setul_3
             int n, poz_min = 1, poz_max = 1, min, max, x;
             Console.WriteLine("Cititi un numar natural nenul n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
-            Console.WriteLine("apoi elementele vectorului");
-            x = int.Parse(Console.ReadLine());
-            min = max = x;
+            Console.WriteLine("apoi elementele vectorului"); 
             int[] v = new int[n];
+            x = int.Parse(Console.ReadLine());
+            v[0] = x;
+            min = max = x;
+           
             for (int i = 1; i < n; i++)
             {
                 x = int.Parse(Console.ReadLine());
@@ -190,7 +190,7 @@ namespace Setul_3
         }
         private static void ex_5()
         {
-            int n, e, k, x;
+            int n, e, k;
             Console.WriteLine("Cititi un numar natural nenul n, dimensiunea unui vector, e un numar, si k, o pozitie din vector");
             n = int.Parse(Console.ReadLine());
             e = int.Parse(Console.ReadLine());
@@ -199,12 +199,9 @@ namespace Setul_3
             int[] v = new int[n];
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
+                v[i] = int.Parse(Console.ReadLine());
                 if (i == k)
                     v[i] = e;
-                else
-                    v[i] = x;
-
             }
             Console.WriteLine();
             Console.WriteLine("Vectorul actualizat este: ");
@@ -216,7 +213,7 @@ namespace Setul_3
 
         private static void ex_6()
         {
-            int n, k, x;
+            int n, k;
             Console.WriteLine("Cititi un numar natural nenul n, dimensiunea unui vector si k, o pozitie din vector");
             n = int.Parse(Console.ReadLine());
             k = int.Parse(Console.ReadLine());
@@ -224,8 +221,7 @@ namespace Setul_3
             int?[] v = new int?[n];
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
 
             }
 
@@ -244,7 +240,7 @@ namespace Setul_3
         }
         private static void ex_7()
         {
-            int n, x, aux;
+            int n, aux;
             Console.WriteLine("Cititi un numar natural nenul n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
 
@@ -252,8 +248,7 @@ namespace Setul_3
             int[] v = new int[n];
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
 
             }
 
@@ -275,7 +270,7 @@ namespace Setul_3
         }
         private static void ex_8()
         {
-            int n, x, aux;
+            int n, aux;
             Console.WriteLine("Cititi un numar natural nenul n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
 
@@ -283,9 +278,8 @@ namespace Setul_3
             int[] v = new int[n];
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
-
+                v[i] = int.Parse(Console.ReadLine());
+ 
             }
 
             Console.WriteLine($"si rotiti pozitia primului elem spre stg");
@@ -304,7 +298,7 @@ namespace Setul_3
         }
         private static void ex_9()
         {
-            int n, k, x, aux;
+            int n, k, aux;
             Console.WriteLine("Cititi doua nr naturale nenule n, dimensiunea unui vector si k");
             n = int.Parse(Console.ReadLine());
             k = int.Parse(Console.ReadLine());
@@ -313,9 +307,8 @@ namespace Setul_3
             int[] v = new int[n];
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
-
+                v[i] = int.Parse(Console.ReadLine());
+        
             }
 
             Console.WriteLine($"si rotiti pozitia primului elem spre stg de {k} ori");
@@ -337,7 +330,7 @@ namespace Setul_3
 
         private static void ex_10()
         {
-            int n, x, stg = 0, dr, mij, k;
+            int n, stg = 0, dr, mij, k;
             Console.WriteLine("Cititi doua nr naturale nenule n, dimensiunea unui vector sortat crescator si k, un posibil elem din vector");
             n = int.Parse(Console.ReadLine());
             dr = n - 1;
@@ -347,8 +340,7 @@ namespace Setul_3
             int[] v = new int[n];
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
 
             }
 
@@ -401,15 +393,14 @@ namespace Setul_3
         {
             ///<sortare prin selectie>
             ///
-            int n, x, pivot, aux, poz;
+            int n, pivot, aux, poz;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
             int[] v = new int[n];
             Console.WriteLine($"apoi {n} elemente ale sale");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
             }
 
             for (int i = 0; i < n - 1; i++)
@@ -435,15 +426,15 @@ namespace Setul_3
         {
             ///<sortare prin insertie>
             ///
-            int n, x;
+            int n;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
             int[] v = new int[n];
             Console.WriteLine($"apoi {n} elemente ale sale");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
+             
             }
             int aux;
             for (int i = 0; i < n - 1; i++)
@@ -463,15 +454,15 @@ namespace Setul_3
         }
         private static void ex_14()
         {
-            int n, x, i, zero = 0, indice_nul = -1;
+            int n, i, zero = 0, indice_nul = -1;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector,");
             n = int.Parse(Console.ReadLine());
             int[] v = new int[n];
             Console.WriteLine($"apoi {n} elemente ale sale");
             for (i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
+              
             }
             Console.WriteLine("si mutati toate elementele nule la capatul drept al vectorului printr o singura parcurgere a sa");
 
@@ -545,16 +536,15 @@ namespace Setul_3
         }
         private static void ex_15()
         {
-            int n, x;
+            int n;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector,");
             n = int.Parse(Console.ReadLine());
             int?[] v = new int?[n];
             Console.WriteLine("apoi cititi pe fiecare linie noua elementele vectorului");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
-
+                v[i] = int.Parse(Console.ReadLine());
+             
             }
             Console.WriteLine("si stergeti elementele ce se repeta, dar fara a va folosi de alt vector");
             for (int i = 0; i < n - 1; i++)
@@ -595,16 +585,15 @@ namespace Setul_3
         }
         private static void ex_16()
         {
-            int n, x;
+            int n;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector,");
             n = int.Parse(Console.ReadLine());
             int[] v = new int[n];
             Console.WriteLine("apoi cititi pe fiecare linie noua elementele vectorului");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
-
+                v[i] = int.Parse(Console.ReadLine());
+              
             }
             Console.WriteLine("si afisati cmmdc al elementelor din vector:");
             int elem = v[0];
@@ -679,8 +668,7 @@ namespace Setul_3
             Console.WriteLine($"cititi pe fiecare linie noua, elementele din vector, ce reprezinta coeficicienti sumei polinomiale, de dimensiune {n}");
             for (int i = 0; i < n; i++)
             {
-                x = long.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = long.Parse(Console.ReadLine());
             }
 
             Random rnd = new Random();
@@ -695,7 +683,7 @@ namespace Setul_3
         }
         private static void ex_19()
         {
-            int n, m, x, i = 0, i1, j, k, sir = 0;
+            int n, m, i = 0, i1, j, k, sir = 0;
             Console.WriteLine("Cititi doua nr n, m, n > m, dimensiunile a doi vectori");
             n = int.Parse(Console.ReadLine());
             m = int.Parse(Console.ReadLine());
@@ -709,17 +697,17 @@ namespace Setul_3
             Console.WriteLine($"Apoi cititi pe fiecare linie noua, elementele din vectorul a, de dimensiune {n}");
             for (i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                a[i] = x;
+                a[i] = int.Parse(Console.ReadLine());
+              
             }
             int[] b = new int[m];
             Console.WriteLine($"respectiv elementele din vectorul b, de dimensiune {m} si aflati de cate ori se repeta al doilea vector in primul");
             for (i = 0; i < m; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                b[i] = x;
+                b[i] = int.Parse(Console.ReadLine());
+             
             }
-           
+
             while (i + m <= n)
             {
                 if (b[0] == a[i])
@@ -839,7 +827,7 @@ namespace Setul_3
         }
         private static void ex_22()
         {
-            int n, m, x, i, j;
+            int n, m, i, j;
             Console.WriteLine("Cititi doua nr n, m, dimensiunile a doi vectori");
             n = int.Parse(Console.ReadLine());
             m = int.Parse(Console.ReadLine());
@@ -848,15 +836,15 @@ namespace Setul_3
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele din primul vector");
             for (i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                a[i] = x;
+                a[i] = int.Parse(Console.ReadLine());
+              
             }
             int?[] b = new int?[m];
             Console.WriteLine("respectiv elementele din al doilea vector");
             for (i = 0; i < m; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                b[i] = x;
+                b[i] = int.Parse(Console.ReadLine());
+               
             }
             Console.WriteLine("si aflati reuniunia, intersectia si diferentele dintre cei doi vectori v1-v2 si v2 -v1");
 
@@ -988,8 +976,8 @@ namespace Setul_3
         }
         private static void ex_23()
         {
-            int n, m, x, i, j;
-            Console.WriteLine("Cititi doua nr n, m, dimensiunile a doi vectori sortati strict crescator");
+            int n, m, i, j;
+            Console.WriteLine("Cititi doua nr n, m, dimensiunile a doi vectori sortati STRICT crescator");
             n = int.Parse(Console.ReadLine());
             m = int.Parse(Console.ReadLine());
 
@@ -997,15 +985,15 @@ namespace Setul_3
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele din primul vector sortat");
             for (i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                a[i] = x;
+                a[i] = int.Parse(Console.ReadLine());
+                
             }
             int[] b = new int[m];
             Console.WriteLine("respectiv elementele din al doilea vector sortat");
             for (i = 0; i < m; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                b[i] = x;
+                b[i] = int.Parse(Console.ReadLine());
+                 
             }
             Console.WriteLine("si aflati reuniunia, intersectia si diferentele dintre cei doi vectori v1-v2 si v2 -v1");
             Console.WriteLine();
@@ -1199,7 +1187,7 @@ namespace Setul_3
         }
         private static void ex_25()
         {
-            int n, m, x, i, j;
+            int n, m, i, j;
             Console.WriteLine("Cititi doua nr n, m, n > m, dimensiunile a doi vectori");
             n = int.Parse(Console.ReadLine());
             m = int.Parse(Console.ReadLine());
@@ -1213,15 +1201,15 @@ namespace Setul_3
             Console.WriteLine($"Apoi cititi pe fiecare linie noua, elementele sortate din vectorul a, de dimensiune {n}");
             for (i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                a[i] = x;
+                a[i] = int.Parse(Console.ReadLine());
+                
             }
             int[] b = new int[m];
             Console.WriteLine($"respectiv elementele sortate din vectorul b, de dimensiune {m}");
             for (i = 0; i < m; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                b[i] = x;
+                b[i] = int.Parse(Console.ReadLine());
+               
             }
             Console.WriteLine("si interclasati cei 2 vectori: ");
 
@@ -1258,48 +1246,16 @@ namespace Setul_3
 
             Console.WriteLine();
         }
-        private static void ex_26()
+        private static void SUMA_DIFERENTA_PRODUS(int n, int[] a, int m, int[] b, bool neg)
         {
-            int n, m, x, i, j;
-            bool neg = false;
-            Console.WriteLine("Cititi doua nr n, m, dimensiunile a doi vectori");
-
-            n = int.Parse(Console.ReadLine());
-            m = int.Parse(Console.ReadLine());
+            int i, j, k;
             if (n < m)
-            {
                 neg = true;
-                int aux = n;
-                n = m;
-                m = aux;
-            }
 
-            int[] a = new int[n];
             int[] Sum = new int[n];
             int[] Dif = new int[n];
 
-            Console.WriteLine();
-            Console.WriteLine($"apoi pe fiecare linie noua, cifrele din vectorul a, de dimensiune {n}");
-
-            for (i = 0; i < n; i++)
-            {
-                x = int.Parse(Console.ReadLine());
-                a[i] = x;
-            }
-
-            Console.WriteLine();
-            int[] b = new int[m];
-            Console.WriteLine($"respectiv cifrele din vectorul b, de dimensiune {m}");
-            for (i = 0; i < m; i++)
-            {
-                x = int.Parse(Console.ReadLine());
-                b[i] = x;
-
-            }
-
-            Console.WriteLine();
-            Console.WriteLine("si aflati suma, diferenta si produsul nr reprezentate de cifrele din cei doi vectori");
-
+           
 
             ///1) SUMA
             bool carry = false;
@@ -1479,7 +1435,7 @@ namespace Setul_3
             int poz = 1;
             int[] a1 = new int[n + m];
             int[] b1 = new int[n + m];
-            int carry_cif, k;
+            int carry_cif;
 
 
             for (i = 0; i < n + m; i++)
@@ -1588,10 +1544,53 @@ namespace Setul_3
 
 
         }
+        private static void ex_26()
+        {
+            int n, m, i, j;
+            bool neg = false;
+            Console.WriteLine("Cititi doua nr n, m, dimensiunile a doi vectori");
+
+            n = int.Parse(Console.ReadLine());
+            m = int.Parse(Console.ReadLine());
+            int[] a = new int[n];
+            int[] b = new int[m];
+            Console.WriteLine();
+            Console.WriteLine($"apoi pe fiecare linie noua, cifrele din vectorul a, de dimensiune {n}");
+
+            for (i = 0; i < n; i++)
+            {
+                a[i] = int.Parse(Console.ReadLine());
+
+            }
+
+            Console.WriteLine();
+
+            Console.WriteLine($"respectiv cifrele din vectorul b, de dimensiune {m}");
+            for (i = 0; i < m; i++)
+            {
+                b[i] = int.Parse(Console.ReadLine());
+
+
+            }
+
+            Console.WriteLine();
+            Console.WriteLine("si aflati suma, diferenta si produsul nr reprezentate de cifrele din cei doi vectori");
+
+            if (n < m)
+            {
+                neg = true;
+                SUMA_DIFERENTA_PRODUS(m,b,n,a,neg);
+            }
+            else
+                SUMA_DIFERENTA_PRODUS(n,a,m,b,neg);
+
+
+
+        }
         private static void ex_27()
         {
 
-            int n, k, x;
+            int n, k;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector si k, o pozitie din vector");
             n = int.Parse(Console.ReadLine());
             k = int.Parse(Console.ReadLine());
@@ -1599,8 +1598,8 @@ namespace Setul_3
             Console.WriteLine($"apoi {n} elemente ale sale");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
+                
             }
             Console.WriteLine($"si aflati ce element se afla pe poz {k}, dupa ce vectorul va fi sortat");
             int aux;
@@ -1649,7 +1648,7 @@ namespace Setul_3
 
         private static void ex_28()
         {
-            int n, x;
+            int n;
             Console.WriteLine("Cititi un nr n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
 
@@ -1657,8 +1656,8 @@ namespace Setul_3
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele vectorului");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
+                
             }
 
             Console.WriteLine("si ordonati vectorul folosindu va de algoritmul de sortare Quicksort: ");
@@ -1725,7 +1724,7 @@ namespace Setul_3
         }
         private static void ex_29()
         {
-            int n, x;
+            int n;
             Console.WriteLine("Cititi un nr n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
 
@@ -1733,8 +1732,8 @@ namespace Setul_3
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele vectorului");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
+            
             }
 
             Console.WriteLine("si ordonati vectorul folosindu va de algoritmul de sortare Mergesort: ");
@@ -1749,7 +1748,7 @@ namespace Setul_3
 
         private static void ex_30()
         {
-            int n, x, i, j, aux;
+            int n, i, j, aux;
             Console.WriteLine("Cititi un numar n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
 
@@ -1757,15 +1756,15 @@ namespace Setul_3
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele din primul vector");
             for (i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                E[i] = x;
+                E[i] = int.Parse(Console.ReadLine());
+               
             }
             int[] W = new int[n];
             Console.WriteLine("respectiv elementele din al doilea vector, ce reprezinta ponderile primulul vector");
             for (i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                W[i] = x;
+                W[i] = int.Parse(Console.ReadLine());
+                
             }
             Console.WriteLine("si ordonati ambii vectori, in asa fel incat doua elemente identice din primul vector vor fi sortate in functie de ponderi, cea mai mare fiind prima");
             i = 0;
@@ -1807,7 +1806,7 @@ namespace Setul_3
         }
         private static void ex_31()
         {
-            int n, x;
+            int n;
             Console.WriteLine("Cititi un nr n, dimensiunea unui vector");
             n = int.Parse(Console.ReadLine());
 
@@ -1815,8 +1814,8 @@ namespace Setul_3
             Console.WriteLine("Apoi cititi pe fiecare linie noua, elementele vectorului");
             for (int i = 0; i < n; i++)
             {
-                x = int.Parse(Console.ReadLine());
-                v[i] = x;
+                v[i] = int.Parse(Console.ReadLine());
+              
             }
 
             Console.WriteLine("si aflati elementul majoritar ");
