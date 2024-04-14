@@ -483,7 +483,7 @@ namespace Setul_3
                     {
                         v[indice_nul] = v[i];
                         v[i] = 0;
-                        if (v[indice_nul + 1] == 0)
+                        if (indice_nul + 1 < n && v[indice_nul + 1] == 0)
                             indice_nul++;
                         else
                             indice_nul = -1;
@@ -500,7 +500,7 @@ namespace Setul_3
 
                             v[indice_nul] = v[i];
                             v[i] = 0;
-                            if (v[indice_nul + 1] == 0)
+                            if (indice_nul + 1 < n && v[indice_nul + 1] == 0)
                                 indice_nul++;
                             else
                                 indice_nul = i - zero;
@@ -511,7 +511,7 @@ namespace Setul_3
 
                             v[i - zero] = v[i];
                             v[i] = 0;
-                            if (v[i - zero + 1] == 0)
+                            if (i - zero + 1 < n && v[i - zero + 1] == 0)
                                 indice_nul = i - zero + 1;
                             else
                                 indice_nul = -1;
@@ -521,7 +521,7 @@ namespace Setul_3
                     {
                         v[i - zero] = v[i];
                         v[i] = 0;
-                        if (v[i - zero + 1] == 0)
+                        if (i - zero + 1 < n && v[i - zero + 1] == 0)
                             indice_nul = i - zero + 1;
 
                     }
